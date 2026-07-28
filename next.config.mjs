@@ -1,16 +1,7 @@
 /** @type {import('next').NextConfig} */
-const isGithubActions = process.env.GITHUB_ACTIONS || false;
-
-let repo = '';
-if (isGithubActions) {
-  // Extracts 'portfolio' from 'hcavale/portfolio'
-  repo = process.env.GITHUB_REPOSITORY.replace(/.*?\//, '');
-}
-
 const nextConfig = {
   output: 'export',
-  basePath: repo ? `/${repo}` : '',
-  assetPrefix: repo ? `/${repo}/` : '',
+  basePath: '/portfolio', // <-- Match your GitHub repository name
   images: {
     unoptimized: true,
   },
