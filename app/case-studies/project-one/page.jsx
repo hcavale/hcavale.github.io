@@ -64,7 +64,7 @@ export default function DeltaVCaseStudy() {
           <div className="pt-4">
             <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden shadow-2xl">
               <img 
-                src="/images/slide-1-hero.png" 
+                src="./images/slide-1-hero.png" 
                 alt="Slide 1 - Presentation Hero Banner" 
                 className="w-full h-auto object-cover"
               />
@@ -84,7 +84,7 @@ export default function DeltaVCaseStudy() {
             <div className="space-y-4">
               <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden p-2">
                 <img 
-                  src="/images/slide-2-legacy.png" 
+                  src="./images/slide-2-legacy.png" 
                   alt="Slide 2 - Legacy Desktop Interface" 
                   className="w-full h-auto rounded"
                 />
@@ -101,7 +101,7 @@ export default function DeltaVCaseStudy() {
             <div className="space-y-4">
               <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden p-2">
                 <img 
-                  src="/images/slide-3-solution-overview.png" 
+                  src="./images/slide-3-solution-overview.png" 
                   alt="Slide 3 - Modern Enterprise Solution Overview" 
                   className="w-full h-auto rounded"
                 />
@@ -127,7 +127,7 @@ export default function DeltaVCaseStudy() {
           <div className="grid md:grid-cols-12 gap-8 items-center">
             <div className="md:col-span-7 rounded-lg border border-zinc-800 bg-zinc-900 p-3 overflow-hidden">
               <img 
-                src="/images/slide-4-architecture.png" 
+                src="./images/slide-4-architecture.png" 
                 alt="Slide 4 - Data System Architecture Diagram" 
                 className="w-full h-auto rounded object-contain"
               />
@@ -170,7 +170,7 @@ export default function DeltaVCaseStudy() {
             </div>
             <div className="md:col-span-7 rounded-lg border border-zinc-800 bg-zinc-900 p-3 overflow-hidden">
               <img 
-                src="/images/slide-5-workshop.png" 
+                src="./images/slide-5-workshop.png" 
                 alt="Slide 5 - Miro Workshop Artifacts" 
                 className="w-full h-auto rounded"
               />
@@ -194,7 +194,7 @@ export default function DeltaVCaseStudy() {
               </div>
             </div>
             <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden shadow-xl">
-              <img src="/images/slide-6-browse.png" alt="Slide 6 - Browse Interface" className="w-full h-auto" />
+              <img src="./images/slide-6-browse.png" alt="Slide 6 - Browse Interface" className="w-full h-auto" />
             </div>
           </div>
 
@@ -207,7 +207,7 @@ export default function DeltaVCaseStudy() {
               </div>
             </div>
             <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden shadow-xl">
-              <img src="/images/slide-7-compare.png" alt="Slide 7 - Compare Interface" className="w-full h-auto" />
+              <img src="./images/slide-7-compare.png" alt="Slide 7 - Compare Interface" className="w-full h-auto" />
             </div>
           </div>
 
@@ -220,7 +220,7 @@ export default function DeltaVCaseStudy() {
               </div>
             </div>
             <div className="rounded-lg border border-zinc-800 bg-zinc-900 overflow-hidden shadow-xl">
-              <img src="/images/slide-8-search.png" alt="Slide 8 - Search Interface" className="w-full h-auto" />
+              <img src="./images/slide-8-search.png" alt="Slide 8 - Search Interface" className="w-full h-auto" />
             </div>
           </div>
         </section>
