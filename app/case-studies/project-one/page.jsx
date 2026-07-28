@@ -1,5 +1,4 @@
-const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
-const getImg = (path) => `${basePath}${path}`;
+const getImg = (path) => `/portfolio${path}`;
 
 export default function DeltaVCaseStudy() {
   return (
