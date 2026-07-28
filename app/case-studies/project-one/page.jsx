@@ -1,3 +1,5 @@
+import React from 'react';
+import Link from 'next/link';
 const getImg = (path) => `/portfolio${path}`;
 
 export default function DeltaVCaseStudy() {
