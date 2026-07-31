@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 // Path helper for GitHub Pages static export
-const getImg = (path) => `/portfolio${path}`;
+const getImg = (path) => path;
 
 export default function DeltaVCaseStudy() {
   return (
