@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
-// Path helper for GitHub Pages static export
-const getImg = (path) => `/portfolio${path}`;
+// Path helper for direct root static export
+const getImg = (path) => path;
 
 export default function Home() {
   return (
@@ -73,7 +73,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             
-            {/* FEATURED CASE STUDY CARD (Main Link) */}
+            {/* FEATURED CASE STUDY CARD */}
             <Link 
               href="/case-studies/project-one"
               className="group block space-y-4 p-4 bg-white border border-oxford/10 rounded-sm shadow-xs hover:border-oxford/30 transition-all"
