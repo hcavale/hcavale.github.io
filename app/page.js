@@ -64,19 +64,9 @@ export default function Home() {
         {/* HERO SECTION - FULL LANDING SCREEN */}
         <section className="min-h-[80vh] flex flex-col items-center justify-center text-center space-y-8 max-w-3xl mx-auto px-4 py-12">
           
-          {/* HEADING WITH INLINE AVATAR */}
+          {/* HEADING*/}
           <h1 className="text-4xl md:text-6xl font-normal tracking-tight text-oxford leading-tight flex flex-wrap items-center justify-center gap-3 md:gap-4">
-            <span>Hi,</span>
-            <img 
-              src={getImg('/images/avatar.jpg')} 
-              alt="Harsheta Cavale" 
-              className="w-12 h-12 md:w-16 md:h-16 rounded-xl object-cover shadow-sm border border-oxford/10 inline-block align-middle transform -rotate-2"
-              onError={(e) => { 
-                // Fallback placeholder if image path isn't set yet
-                e.currentTarget.style.display = 'none'; 
-              }}
-            />
-            <span>I'm Harsheta!</span>
+            <span>Hi,I'm Harsheta!</span>
           </h1>
 
           {/* CUSTOMER-FOCUSED CENTERED DESCRIPTION */}
