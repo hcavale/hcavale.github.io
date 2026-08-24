@@ -1,125 +1,123 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 
-export default function AboutPage() {
+const getImg = (path) => path;
+
+export default function About() {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#f5f5f5] font-sans antialiased selection:bg-zinc-800 selection:text-white">
+    <div className="min-h-screen bg-platinum text-ink font-sans antialiased selection:bg-oxford selection:text-platinum pb-32">
       
-      {/* NAVIGATION */}
-      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#0a0a0a]/80 border-b border-zinc-800/80 px-6 py-4">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <Link 
-            href="/" 
-            className="text-xs font-mono text-zinc-400 hover:text-white transition-colors flex items-center gap-2"
-          >
-            ← Home
-          </Link>
-          <div className="flex gap-6 text-xs font-mono">
-            <Link href="/" className="text-zinc-400 hover:text-white transition-colors">Work</Link>
-            <Link href="/about/" className="text-white">About</Link>
-          </div>
-        </div>
-      </nav>
-
-      <main className="max-w-4xl mx-auto px-6 py-16 space-y-20">
-        
-        {/* HERO INTRO */}
-        <section className="space-y-6">
-          <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">
-            About / UX & Systems Design
+      {/* NAVIGATION HEADER */}
+      <header className="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3 group">
+          <img 
+            src={getImg('/favicon.png')} 
+            alt="Harsheta Cavale Logo" 
+            className="w-8 h-8 object-contain transition-transform group-hover:scale-105"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+          <span className="font-semibold text-oxford tracking-tight text-base group-hover:text-bluebell transition-colors">
+            HC
           </span>
-          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight leading-snug">
-            Bridging technical complexity with intuitive product design.
-          </h1>
-          <p className="text-lg md:text-xl text-zinc-400 font-light leading-relaxed">
-            I’m a Lead Product Designer with a background in software coding, specializing in complex enterprise SaaS, industrial automation, and large-scale digital systems.
-          </p>
-        </section>
+        </Link>
 
-        {/* BACKGROUND & PHILOSOPHY */}
-        <section className="grid md:grid-cols-12 gap-8 pt-12 border-t border-zinc-800/80">
-          <div className="md:col-span-4">
-            <h2 className="text-sm font-mono text-zinc-300 uppercase tracking-wider">Design Philosophy</h2>
-          </div>
-          <div className="md:col-span-8 space-y-4 text-zinc-400 text-sm leading-relaxed">
-            <p>
-              Having a technical engineering foundation shapes how I approach product design. I don’t just design pretty interfaces—I design systems that respect data architecture, scalability constraints, and front-end reality.
-            </p>
-            <p>
-              My focus is on transforming dense, data-heavy workflows into fast, clear discovery tools for enterprise power users without dumbing down the functional density they rely on daily.
-            </p>
-          </div>
-        </section>
+        <nav className="flex items-center gap-6 md:gap-10 font-sans text-sm md:text-base text-ink/80 tracking-wide">
+          <Link href="/" className="hover:text-oxford transition-colors duration-200">
+            Home
+          </Link>
+          <Link href="/#work" className="hover:text-oxford transition-colors duration-200">
+            Case Studies
+          </Link>
+          <Link href="/about" className="text-oxford font-medium border-b border-oxford pb-0.5">
+            About
+          </Link>
+          <a 
+            href="/resume.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-oxford transition-colors duration-200"
+          >
+            Resume
+          </a>
+        </nav>
+      </header>
 
-        {/* SKILLS & TECHNICAL STACK */}
-        <section className="grid md:grid-cols-12 gap-8 pt-12 border-t border-zinc-800/80">
-          <div className="md:col-span-4">
-            <h2 className="text-sm font-mono text-zinc-300 uppercase tracking-wider">Capabilities</h2>
-          </div>
-          <div className="md:col-span-8 grid sm:grid-cols-2 gap-6 text-xs font-mono">
-            <div className="space-y-3 p-5 rounded-lg bg-zinc-900/40 border border-zinc-800/60">
-              <span className="text-zinc-200 block font-sans text-sm font-medium">Product & UX Design</span>
-              <ul className="space-y-1.5 text-zinc-400">
-                <li>• Information Architecture</li>
-                <li>• Design Systems Strategy</li>
-                <li>• Enterprise SaaS Workflows</li>
-                <li>• Interactive Prototyping</li>
-                <li>• User Research & Synthesis</li>
-              </ul>
-            </div>
-            
-            <div className="space-y-3 p-5 rounded-lg bg-zinc-900/40 border border-zinc-800/60">
-              <span className="text-zinc-200 block font-sans text-sm font-medium">Technical & Engineering</span>
-              <ul className="space-y-1.5 text-zinc-400">
-                <li>• Front-End Architecture</li>
-                <li>• React / Next.js Development</li>
-                <li>• Tailwind CSS & Component Styling</li>
-                <li>• Git Version Control</li>
-                <li>• Developer Handoff & Specifications</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        {/* CONTACT / CONNECT */}
-        <section className="pt-12 border-t border-zinc-800/80 space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono text-zinc-500 uppercase tracking-widest">Connect</span>
-            <h2 className="text-2xl font-semibold tracking-tight">Let's talk.</h2>
-          </div>
+      {/* MAIN ABOUT CONTENT */}
+      <main className="max-w-6xl mx-auto px-6 pt-12 md:pt-20">
+        <div className="grid md:grid-cols-12 gap-12 items-center">
           
-          <div className="flex flex-wrap gap-4 text-xs font-mono">
-            <a 
-              href="mailto:your.email@example.com" 
-              className="px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 rounded transition-colors"
-            >
-              Email Me
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noreferrer"
-              className="px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-zinc-200 rounded transition-colors"
-            >
-              LinkedIn
-            </a>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noreferrer"
-              className="px-4 py-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-400 hover:text-zinc-200 rounded transition-colors"
-            >
-              GitHub
-            </a>
+          {/* LEFT COLUMN: TEXT CONTENT */}
+          <div className="md:col-span-7 space-y-6">
+            <span className="text-sm text-ink/70 font-sans tracking-wide">
+              Hello! Nice to meet you.
+            </span>
+
+            <h1 className="text-3xl md:text-5xl font-normal tracking-tight text-oxford leading-tight">
+              I’m Harsheta, a lead product and interaction designer.
+            </h1>
+
+            <div className="space-y-4 text-sm md:text-base text-ink/80 leading-relaxed font-light">
+              <p>
+              Backed by a background in Computer Science, I design high-impact user experiences for complex, technical ecosystems—including life sciences, cloud architecture, and embedded hardware.
+              </p>
+
+              <p>
+              Currently leading flagship UX initiatives at Emerson Process Management, I translate complex backend engineering constraints into intuitive, operator-first workflows. I specialize in bridging engineering and design, standardizing application interoperability, and embedding AI tools like Claude Design and Figma Make directly into the product lifecycle.
+              </p>
+
+              <p>
+                Outside of design, I enjoy traveling to new places, hiking outdoors, and embroidering.
+              </p>
+
+              <p className="pt-2 font-normal text-oxford">
+                I would love to connect with you!
+              </p>
+            </div>
+
+            {/* CALL TO ACTION BUTTONS */}
+            <div className="pt-4 flex flex-wrap items-center gap-4 font-mono text-xs">
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 bg-oxford text-platinum rounded-sm hover:bg-bluebell transition-all duration-200 font-medium flex items-center gap-2 shadow-xs"
+              >
+                <span>View LinkedIn</span>
+                <span className="text-sm">→</span>
+              </a>
+
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3.5 bg-white border border-oxford/20 text-oxford rounded-sm hover:bg-oxford/5 hover:border-oxford/40 transition-all duration-200 font-medium flex items-center gap-2"
+              >
+                <span>Download Resume</span>
+                <span className="text-sm">→</span>
+              </a>
+            </div>
           </div>
-        </section>
 
+          {/* RIGHT COLUMN: PORTRAIT PHOTO */}
+          <div className="md:col-span-5 flex justify-center md:justify-end">
+            <div className="relative w-full max-w-md aspect-[4/5] rounded-3xl overflow-hidden bg-oxford/5 border border-oxford/10 shadow-sm">
+              <img 
+                src={getImg('/images/about-portrait.jpg')} 
+                alt="Harsheta Cavale" 
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            </div>
+          </div>
+
+        </div>
       </main>
-
-      <footer className="border-t border-zinc-800/80 py-12 px-6 mt-20 text-center text-xs text-zinc-500 font-mono">
-        <p>Designed & Coded with intention.</p>
-      </footer>
-
     </div>
   );
 }

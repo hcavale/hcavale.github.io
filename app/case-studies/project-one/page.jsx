@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-// Path helper for GitHub Pages static export
+// Path helper for root static export
 const getImg = (path) => path;
 
 export default function DeltaVCaseStudy() {
@@ -15,7 +15,7 @@ export default function DeltaVCaseStudy() {
             href="/" 
             className="text-xs font-mono text-oxford/70 hover:text-bluebell transition-colors flex items-center gap-2 tracking-wider uppercase font-medium"
           >
-            ← Index
+            ← Home
           </Link>
           <span className="text-xs font-mono text-dusty uppercase tracking-widest hidden sm:inline">
             DeltaV Enterprise Explorer
@@ -32,7 +32,7 @@ export default function DeltaVCaseStudy() {
               Lead Product Designer
             </span>
             <span className="px-3 py-1 bg-platinum border border-dusty/40 rounded-full text-dusty">
-              Industrial Automation
+              Industrial Automation & Enterprise SaaS
             </span>
           </div>
 
@@ -41,225 +41,236 @@ export default function DeltaVCaseStudy() {
           </h1>
           
           <p className="text-xl md:text-2xl text-ink/80 font-light max-w-3xl leading-relaxed">
-            Architecting a $16M enterprise platform to index, compare, and query complex industrial control data across global manufacturing facilities.
+            Unifying global industrial automation data into a single discovery engine.
           </p>
 
           {/* METRICS & CONTEXT BAR */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-oxford/10 font-mono text-xs">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pt-8 border-t border-oxford/10 font-mono text-xs">
             <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
-              <span className="text-dusty block uppercase">Impact Valuation</span>
-              <span className="text-oxford font-semibold text-base">$16M Enterprise Asset</span>
+              <span className="text-dusty block uppercase">Role & Scope</span>
+              <span className="text-oxford font-semibold text-sm block">IA, Interaction Design, Strategy</span>
             </div>
             <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
               <span className="text-dusty block uppercase">Indexed Nodes</span>
-              <span className="text-ink font-semibold text-base">50,000+ Parameters</span>
+              <span className="text-ink font-semibold text-base block">50,000+ Parameters</span>
             </div>
-            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs col-span-2 md:col-span-1">
               <span className="text-dusty block uppercase">Audit Velocity</span>
-              <span className="text-ink font-semibold text-base">Days → Minutes</span>
-            </div>
-            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
-              <span className="text-dusty block uppercase">Core Scope</span>
-              <span className="text-ink font-medium">UX Architecture & Alignment</span>
+              <span className="text-ink font-semibold text-base block">Days → Minutes</span>
             </div>
           </div>
 
-          {/* SLIDE 1 - HERO IMAGE */}
+          {/* HERO IMAGE */}
           <div className="pt-6">
-            <div className="rounded-sm border border-oxford/10 bg-white overflow-hidden shadow-lg p-2">
+            <div className="max-w-3xl mx-auto rounded-sm border border-oxford/10 bg-white overflow-hidden shadow-sm p-2">
               <img 
                 src={getImg('/images/slide-1-hero.png')} 
                 alt="DeltaV Enterprise Explorer Overview" 
-                className="w-full h-auto object-cover rounded-xs"
+                className="w-full h-auto max-h-80 object-contain rounded-xs"
               />
             </div>
           </div>
         </header>
 
-        {/* SECTION 01: CONTRAST & CONTEXT */}
-        <section className="space-y-10 pt-12 border-t border-oxford/10">
-          <div className="space-y-2">
-            <span className="text-xs font-mono text-dusty uppercase tracking-widest">01 / Structural Challenge</span>
-            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">The Problem: Fractured Industrial Data</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="space-y-4">
-              <div className="rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
-                <img 
-                  src={getImg('/images/slide-2-legacy.png')} 
-                  alt="Legacy System Interface" 
-                  className="w-full h-auto rounded-xs"
-                />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-xs font-mono text-oxford font-semibold uppercase tracking-wider">Legacy State</h3>
-                <p className="text-sm text-ink/70 leading-relaxed">
-                  Engineers were tied to localized desktop software with rigid tree navigation, requiring separate instances to audit individual plant sites.
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <div className="rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
-                <img 
-                  src={getImg('/images/slide-3-solution-overview.png')} 
-                  alt="Modern Solution State Interface" 
-                  className="w-full h-auto rounded-xs"
-                />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-xs font-mono text-bluebell font-semibold uppercase tracking-wider">Modern Solution State</h3>
-                <p className="text-sm text-ink/70 leading-relaxed">
-                  A unified cloud explorer offering continuous visibility across thousands of global parameter blocks without sacrificing data density.
-                </p>
-              </div>
-            </div>
-          </div>
+        {/* OVERVIEW */}
+        <section className="space-y-6 pt-12 border-t border-oxford/10">
+          <span className="text-xs font-mono text-dusty uppercase tracking-widest">Overview</span>
+          <p className="text-lg text-ink/80 font-light leading-relaxed max-w-4xl">
+            Modern manufacturing enterprises run on vast networks of distributed control systems. But across global facilities, plant data operates in silos. Engineers tasked with maintaining site standards, auditing safety logic, and validating system configurations lacked a centralized way to discover or cross-reference parameters across locations.
+          </p>
+          <p className="text-lg text-ink/80 font-light leading-relaxed max-w-4xl">
+            DeltaV Enterprise Explorer was conceived as a high-speed discovery engine—transforming a fragmented database of over 50,000 technical assets into a clear, searchable, and comparative cloud ecosystem.
+          </p>
         </section>
 
-        {/* SECTION 02: ARCHITECTURE */}
+        {/* THE CHALLENGE */}
         <section className="space-y-10 pt-12 border-t border-oxford/10">
           <div className="space-y-2">
-            <span className="text-xs font-mono text-dusty uppercase tracking-widest">02 / Technical Architecture</span>
-            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">System Constraints & Topography</h2>
+            <span className="text-xs font-mono text-dusty uppercase tracking-widest">The Challenge</span>
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">Navigating Industrial Complexity</h2>
           </div>
 
-          <div className="grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-7 rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
-              <img 
-                src={getImg('/images/slide-4-architecture.png')} 
-                alt="System Architecture Diagram" 
-                className="w-full h-auto rounded-xs"
-              />
-            </div>
-            <div className="md:col-span-5 space-y-4">
-              <h3 className="text-lg font-medium text-oxford">Architecting for Industrial Latency</h3>
-              <p className="text-sm text-ink/70 leading-relaxed">
-                Designing enterprise software for industrial plants requires balancing high data throughput with varying cloud sync capabilities.
+          <p className="text-sm md:text-base text-ink/80 font-light leading-relaxed max-w-3xl">
+            Designing for industrial automation requires translating immense technical density into low-friction interactions without oversimplifying power-user needs.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase">01 / Architecture</span>
+              <h3 className="text-sm font-semibold text-oxford">Fractured Data Architecture</h3>
+              <p className="text-xs text-ink/70 leading-relaxed">
+                Every plant ran localized software with distinct naming conventions and isolated databases, requiring manual log-ins to audit configurations.
               </p>
-              <div className="space-y-3 font-mono text-xs">
-                <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
-                  <strong className="text-oxford block">Asynchronous Cloud Sync:</strong>
-                  <span className="text-ink/70">UI handles edge-device latency without locking interactions.</span>
-                </div>
-                <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
-                  <strong className="text-oxford block">Flexible Schema Handling:</strong>
-                  <span className="text-ink/70">Gracefully renders missing parameters from legacy plant hardware.</span>
-                </div>
-              </div>
             </div>
-          </div>
-        </section>
 
-        {/* SECTION 03: DISCOVERY */}
-        <section className="space-y-10 pt-12 border-t border-oxford/10">
-          <div className="space-y-2">
-            <span className="text-xs font-mono text-dusty uppercase tracking-widest">03 / Discovery & Synthesis</span>
-            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">Research & Workshop Alignment</h2>
-          </div>
-
-          <div className="grid md:grid-cols-12 gap-8 items-center">
-            <div className="md:col-span-5 space-y-4">
-              <h3 className="text-lg font-medium text-oxford">Alignment Workshops</h3>
-              <p className="text-sm text-ink/70 leading-relaxed">
-                Synthesized insights from systems engineers and subject matter experts into three core design pillars:
+            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase">02 / Usability</span>
+              <h3 className="text-sm font-semibold text-oxford">Density vs. Cognitive Load</h3>
+              <p className="text-xs text-ink/70 leading-relaxed">
+                Single parameter values dictate plant safety and throughput. The interface needed to display deep logic without overwhelming the workspace.
               </p>
-              <ul className="space-y-2 font-mono text-xs text-ink/80">
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bluebell"></span>
-                  Split-pane visual browsing
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bluebell"></span>
-                  Automated parameter diffing
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-bluebell"></span>
-                  Faceted boolean search queries
-                </li>
-              </ul>
             </div>
-            <div className="md:col-span-7 rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
-              <img 
-                src={getImg('/images/slide-5-workshop.png')} 
-                alt="Miro Alignment Workshop Artifacts" 
-                className="w-full h-auto rounded-xs"
-              />
+
+            <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase">03 / Adoption</span>
+              <h3 className="text-sm font-semibold text-oxford">Entrenched Mental Models</h3>
+              <p className="text-xs text-ink/70 leading-relaxed">
+                Decades of desktop software reliance created deep spatial habits. Modernizing required respecting those instincts while removing clutter.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 04: CORE PILLARS */}
+        {/* PROCESS & STRATEGY */}
+        <section className="space-y-6 pt-12 border-t border-oxford/10">
+          <span className="text-xs font-mono text-dusty uppercase tracking-widest">Process & Strategy</span>
+          <p className="text-lg text-ink/80 font-light leading-relaxed max-w-4xl">
+            To bridge complex technical capabilities with clear human workflows, I led cross-functional discovery workshops with systems engineers, domain experts, and product leadership. We mapped how engineers think when searching for data, auditing variances, and verifying system health.
+          </p>
+          <p className="text-lg text-ink/80 font-light leading-relaxed max-w-4xl">
+            Rather than forcing users to learn a completely new paradigm, I structured the core interactions around three fundamental operational tasks: Browsing, Comparing, and Searching.
+          </p>
+        </section>
+
+        {/* WORKFLOW DEEP DIVE */}
         <section className="space-y-16 pt-12 border-t border-oxford/10">
           <div className="space-y-2">
-            <span className="text-xs font-mono text-dusty uppercase tracking-widest">04 / Interaction Design</span>
-            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">Core Interface Pillars</h2>
+            <span className="text-xs font-mono text-dusty uppercase tracking-widest">Core Interaction Workflows</span>
+            <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">Translating Complex Models into Web Solutions</h2>
           </div>
 
-          {/* PILLAR 01 */}
-          <div className="space-y-4">
-            <div className="flex justify-between items-end border-b border-oxford/10 pb-2">
-              <h3 className="text-xl font-medium text-oxford">01. Split-Pane Hierarchy Navigation</h3>
-              <span className="text-xs font-mono text-dusty">Slide 06</span>
+          {/* WORKFLOW 01: BROWSE */}
+          <div className="space-y-6">
+            <div className="space-y-1">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase tracking-wider">01 / Workflow</span>
+              <h3 className="text-xl font-medium text-oxford">
+                Spatial Browsing & Asset Exploration
+              </h3>
+              <p className="text-xs font-mono text-dusty">Translating Deep Folder Hierarchies into Fluid Web Navigation</p>
             </div>
-            <div className="rounded-sm border border-oxford/10 bg-white p-2 shadow-md">
-              <img src={getImg('/images/slide-6-browse.png')} alt="Split-pane navigation" className="w-full h-auto rounded-xs" />
+
+            <div className="grid md:grid-cols-2 gap-4 text-xs">
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Problem</span>
+                <p className="text-ink/80 leading-relaxed">
+                  Engineers frequently lost their spatial orientation when navigating deep database trees, resulting in dozens of open windows and tedious back-and-forth toggling.
+                </p>
+              </div>
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Design Approach</span>
+                <p className="text-ink/80 leading-relaxed">
+                  I designed a split-pane navigation system paired with progressive breadcrumb trails. By anchoring high-level plant topology on the left while rendering detailed parameter views on the right, engineers traverse nested assets without losing context.
+                </p>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
+              <img 
+                src={getImg('/images/slide-6-browse.png')} 
+                alt="Split-pane navigation workflow" 
+                className="w-full h-auto max-h-72 object-contain rounded-xs"
+              />
             </div>
           </div>
 
-          {/* PILLAR 02 */}
-          <div className="space-y-4">
-            <div className="flex justify-between items-end border-b border-oxford/10 pb-2">
-              <h3 className="text-xl font-medium text-oxford">02. Side-by-Side Parameter Diffing Workspace</h3>
-              <span className="text-xs font-mono text-dusty">Slide 07</span>
+          {/* WORKFLOW 02: COMPARE */}
+          <div className="space-y-6 pt-10 border-t border-oxford/10">
+            <div className="space-y-1">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase tracking-wider">02 / Workflow</span>
+              <h3 className="text-xl font-medium text-oxford">
+                Cross-Site Parameter Comparison
+              </h3>
+              <p className="text-xs font-mono text-dusty">Transforming Manual Cross-Referencing into Automated Visual Diffs</p>
             </div>
-            <div className="rounded-sm border border-oxford/10 bg-white p-2 shadow-md">
-              <img src={getImg('/images/slide-7-compare.png')} alt="Parameter diffing workspace" className="w-full h-auto rounded-xs" />
+
+            <div className="grid md:grid-cols-2 gap-4 text-xs">
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Problem</span>
+                <p className="text-ink/80 leading-relaxed">
+                  Identifying discrepancies between local plant configurations and global corporate standards required engineers to export data into spreadsheets and manually cross-check line items line by line.
+                </p>
+              </div>
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Design Approach</span>
+                <p className="text-ink/80 leading-relaxed">
+                  I built an integrated side-by-side comparison workspace utilizing the legacy software's established color language—yellow for configuration variances and blue for missing matches. Honoring these familiar visual cues preserved instant recognition. Paired with a "Show Differences Only" toggle, engineers isolate critical variances across thousands of parameters in seconds.
+                </p>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
+              <img 
+                src={getImg('/images/slide-7-compare.png')} 
+                alt="Parameter diffing workspace workflow" 
+                className="w-full h-auto max-h-72 object-contain rounded-xs"
+              />
             </div>
           </div>
 
-          {/* PILLAR 03 */}
-          <div className="space-y-4">
-            <div className="flex justify-between items-end border-b border-oxford/10 pb-2">
-              <h3 className="text-xl font-medium text-oxford">03. Faceted Query Builder & Search</h3>
-              <span className="text-xs font-mono text-dusty">Slide 08</span>
+          {/* WORKFLOW 03: ADVANCED SEARCH */}
+          <div className="space-y-6 pt-10 border-t border-oxford/10">
+            <div className="space-y-1">
+              <span className="text-xs font-mono text-bluebell font-semibold uppercase tracking-wider">03 / Workflow</span>
+              <h3 className="text-xl font-medium text-oxford">
+                Advanced Discovery & Query Building
+              </h3>
+              <p className="text-xs font-mono text-dusty">Simplifying Complex Database Logic into Guided Search</p>
             </div>
-            <div className="rounded-sm border border-oxford/10 bg-white p-2 shadow-md">
-              <img src={getImg('/images/slide-8-search.png')} alt="Faceted query builder" className="w-full h-auto rounded-xs" />
+
+            <div className="grid md:grid-cols-2 gap-4 text-xs">
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Problem</span>
+                <p className="text-ink/80 leading-relaxed">
+                  Finding specific technical parameters across global facilities required writing specialized database scripts or relying on IT teams, bottlenecking daily audit tasks.
+                </p>
+              </div>
+              <div className="p-4 bg-white border border-oxford/10 rounded-sm space-y-1 shadow-xs">
+                <span className="font-mono text-oxford uppercase font-semibold block">The Design Approach</span>
+                <p className="text-ink/80 leading-relaxed">
+                  I designed an interactive, tokenized query builder that translates complex nested boolean logic into visual filter chips. Combined with predictive auto-complete and contextual scope toggles, power users execute precise cross-site searches effortlessly without writing code.
+                </p>
+              </div>
+            </div>
+
+            <div className="max-w-2xl mx-auto rounded-sm border border-oxford/10 bg-white p-2 shadow-xs">
+              <img 
+                src={getImg('/images/slide-8-search.png')} 
+                alt="Faceted query builder workflow" 
+                className="w-full h-auto max-h-72 object-contain rounded-xs"
+              />
             </div>
           </div>
         </section>
 
-        {/* SECTION 05: OUTCOMES */}
+        {/* OUTCOMES & IMPACT */}
         <section className="space-y-10 pt-12 border-t border-oxford/10">
           <div className="space-y-2">
-            <span className="text-xs font-mono text-dusty uppercase tracking-widest">05 / Measured Impact</span>
+            <span className="text-xs font-mono text-dusty uppercase tracking-widest">Impact & Business Value</span>
             <h2 className="text-2xl md:text-3xl font-normal tracking-tight text-oxford">Outcomes & Value Delivered</h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 font-mono">
             <div className="p-6 bg-white border border-oxford/10 rounded-sm space-y-3 shadow-xs">
-              <div className="text-oxford font-semibold text-4xl">$16M</div>
-              <h3 className="text-sm font-semibold text-ink font-sans">Enterprise Valuation</h3>
-              <p className="text-xs text-ink/70 leading-relaxed font-sans">
-                Architected and delivered a high-value proprietary internal asset expanding cross-site operational capabilities.
-              </p>
-            </div>
-
-            <div className="p-6 bg-white border border-oxford/10 rounded-sm space-y-3 shadow-xs">
-              <div className="text-oxford font-semibold text-4xl">Days → Min</div>
+              <div className="text-oxford font-semibold text-2xl">Days → Min</div>
               <h3 className="text-sm font-semibold text-ink font-sans">Audit Velocity</h3>
-              <p className="text-xs text-ink/70 leading-relaxed font-sans">
-                Reduced site parameter comparison times dramatically, eliminating manual queries and enabling automated compliance reports.
+              <p className="text-xs text-ink/70 leading-relaxed font-sans font-light">
+                Reduced cross-site system audit and parameter comparison times dramatically, replacing manual line-by-line checks.
               </p>
             </div>
 
             <div className="p-6 bg-white border border-oxford/10 rounded-sm space-y-3 shadow-xs">
-              <div className="text-oxford font-semibold text-4xl">50k+</div>
+              <div className="text-oxford font-semibold text-2xl">50,000+</div>
               <h3 className="text-sm font-semibold text-ink font-sans">Indexed Data Nodes</h3>
-              <p className="text-xs text-ink/70 leading-relaxed font-sans">
+              <p className="text-xs text-ink/70 leading-relaxed font-sans font-light">
                 Created a continuous data visualizer capable of managing deep industrial hierarchies without visual clutter.
+              </p>
+            </div>
+
+            <div className="p-6 bg-white border border-oxford/10 rounded-sm space-y-3 shadow-xs">
+              <div className="text-oxford font-semibold text-2xl">Validated</div>
+              <h3 className="text-sm font-semibold text-ink font-sans">Market Traction</h3>
+              <p className="text-xs text-ink/70 leading-relaxed font-sans font-light">
+                Established strong customer validation and partner alignment for the enterprise cloud platform strategy.
               </p>
             </div>
           </div>
